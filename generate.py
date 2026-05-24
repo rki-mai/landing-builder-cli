@@ -5,13 +5,15 @@ from __future__ import annotations
 
 import argparse
 import json
-import sys
+import logging
 from pathlib import Path
 
 from renderer import build_html_page
 
+logger = logging.getLogger(__name__)
 
-def main() -> int:
+
+def main() -> None:
     parser = argparse.ArgumentParser(
         description="Generate HTML from a storage draft JSON (GET /api/v1/storage/{project_id})",
     )
@@ -36,21 +38,21 @@ def main() -> int:
     output_path = Path(args.output)
 
     if not draft_path.is_file():
-        print(f"Draft file not found: {draft_path}", file=sys.stderr)
-        return 1
+        raise FileNotFoundError(f"Draft file not found: {draft_path}")
 
-    try:
-        draft_data = json.loads(draft_path.read_text(encoding="utf-8"))
-        page = build_html_page(draft_data, title=args.title)
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        output_path.write_text(page, encoding="utf-8")
-    except (json.JSONDecodeError, ValueError, OSError) as exc:
-        print(f"Error: {exc}", file=sys.stderr)
-        return 1
+    draft_data = json.loads(draft_path.read_text(encoding="utf-8"))
+    page = build_html_page(draft_data, title=args.title)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(page, encoding="utf-8")
 
-    print(f"HTML written to {output_path}")
-    return 0
+    logger.info("HTML written to %s", output_path)
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
+
+    try:
+        main()
+    except (FileNotFoundError, json.JSONDecodeError, ValueError, OSError) as exc:
+        logger.error("%s", exc)
+        raise SystemExit(1) from None
