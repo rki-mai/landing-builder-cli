@@ -1,0 +1,12 @@
+{
+    "elements": [
+        {
+            "element": "text",
+            "id": "lb-1",
+            "parentId": "root",
+            "index": 0,
+            "value": "Привет",
+            "styles": { "fontSize": "40", "color": "#ff0000" }
+        }
+    ]
+}
