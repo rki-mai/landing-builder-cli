@@ -22,7 +22,7 @@ const containerElementSchema = baseElementSchema.extend({
 }).strip();
 
 const linkElementStylesSchema = z.object({
-    testDecoration: z.union([z.literal("underline"), z.literal("none")]).optional(),
+    textDecoration: z.union([z.literal("underline"), z.literal("none")]).optional(),
 }).strip();
 
 const linkElementSchema = baseElementSchema.extend({
