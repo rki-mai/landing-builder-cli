@@ -1,0 +1,20 @@
+---
+import { ElementsTreeNodeComponent } from '../components/ElementsTreeNode';
+import { config } from '../configLoader';
+import { buildTree } from '../treeBuilder';
+import './index.css';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{config.title}</title>
+	</head>
+	<body>
+		<ElementsTreeNodeComponent node={buildTree(config.elements)} />
+	</body>
+</html>
