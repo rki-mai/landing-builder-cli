@@ -14,10 +14,17 @@ var (
 	outputPath string
 )
 
+const TEMPLATE_PROJECT_DIR = ".template-project"
+
 var buildCmd = &cobra.Command{
 	Use:   "build",
 	Short: "Builds landing from specified Draft file",
 	RunE: func(cmd *cobra.Command, args []string) error {
+		execDir, err := internal.GetExecDir()
+		if err != nil {
+			return fmt.Errorf("Failed to resolve exec dir: %w", err)
+		}
+
 		fmt.Println("Build project...")
 		fmt.Printf("- Draft file path: %s\n", draftPath)
 		fmt.Printf("- Output directory:  %s\n", outputPath)
@@ -37,7 +44,7 @@ var buildCmd = &cobra.Command{
 		}
 
 		if err := internal.RunCommand(internal.Command{
-			Dir:  ".template-project",
+			Dir:  filepath.Join(execDir, TEMPLATE_PROJECT_DIR),
 			Name: "npm",
 			Args: []string{"run", "build", "--", "--outDir", outputFullPath},
 			Env:  map[string]string{"CONFIG_PATH": draftFullPath},
