@@ -1,7 +1,14 @@
 import { ReactNode } from "react";
 import { type ContainerElement } from "../configSchema";
+import { ElementComponent, ElementComponentsContainer } from "./ElementComponent";
 
 
 export const ContainerElementComponent = ({ element, children }: { element: ContainerElement, children: ReactNode }) => {
-    return <div>{children}</div>
+    return (
+        <ElementComponent>
+            <ElementComponentsContainer>
+                {children}
+            </ElementComponentsContainer>
+        </ElementComponent>
+    );
 };

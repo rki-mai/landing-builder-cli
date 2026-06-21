@@ -1,9 +1,12 @@
 import { LinkElement } from "../configSchema";
+import { ElementComponent } from "./ElementComponent";
 
 export const LinkElementComponent = ({ element }: { element: LinkElement }) => {
 	return (
-        <a className="link-element" style={element.styles} href={element.src}>
-            {element.value}
-        </a>
+        <ElementComponent>
+            <a className="link-element" style={element.styles} href={element.src}>
+                {element.value}
+            </a>
+        </ElementComponent>
 	);
 };

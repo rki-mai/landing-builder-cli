@@ -1,73 +1,103 @@
 {
-  "version": 7,
-  "elements": [
-    {
-      "_id": "6a2dda21c163bf6093e5889b",
-      "created_at": "2026-06-13T22:30:57.886Z",
-      "deleted": false,
-      "element": "image",
-      "id": "lb-c10ad31c-0589-46ca-bd4e-f3731188789c",
-      "index": 1,
-      "parentId": "root",
-      "project_id": "30f1a88a-e300-4568-b637-1a7d07069b2a",
-      "styles": {
-        "position": "right",
-        "width": "77"
-      },
-      "value": "https://cdn-user30887.skyeng.ru/uploads/67695996d92d0258406240.webp",
-      "version": 7
-    },
-    {
-      "_id": "6a2dda17c163bf6093e58898",
-      "created_at": "2026-06-13T22:30:47.687Z",
-      "deleted": false,
-      "element": "button",
-      "id": "lb-2ed91ae9-63dd-4412-a303-a0db6b3a50ee",
-      "index": 3,
-      "owner_id": "fe429ee4-dc01-4f81-953c-36aa08b88f08",
-      "parentId": "root",
-      "project_id": "30f1a88a-e300-4568-b637-1a7d07069b2a",
-      "src": "https://example.com/",
-      "styles": {
-        "backgroundColor": "#2196f3",
-        "color": "#ffffff"
-      },
-      "value": "Button",
-      "version": 4
-    },
-    {
-      "_id": "6a2dda15c163bf6093e58897",
-      "created_at": "2026-06-13T22:30:45.568Z",
-      "deleted": false,
-      "element": "link",
-      "id": "lb-a38741db-7153-4682-9468-f4bce3877947",
-      "index": 2,
-      "owner_id": "fe429ee4-dc01-4f81-953c-36aa08b88f08",
-      "parentId": "root",
-      "project_id": "30f1a88a-e300-4568-b637-1a7d07069b2a",
-      "src": "https://example.com/",
-      "styles": {
-        "textDecoration": "underline"
-      },
-      "value": "Link",
-      "version": 3
-    },
-    {
-      "_id": "6a2dda13c163bf6093e58895",
-      "created_at": "2026-06-13T22:30:43.03Z",
-      "deleted": false,
-      "element": "text",
-      "id": "lb-40a06450-fb6a-4763-931f-351ac017c9dd",
-      "index": 0,
-      "owner_id": "fe429ee4-dc01-4f81-953c-36aa08b88f08",
-      "parentId": "root",
-      "project_id": "30f1a88a-e300-4568-b637-1a7d07069b2a",
-      "styles": {
-        "color": "#000000",
-        "fontSize": "12"
-      },
-      "value": "Example",
-      "version": 1
-    }
-  ]
+    "version": 1,
+    "elements": [
+        {
+            "element": "text",
+            "id": "lb-1",
+            "index": 0,
+            "parentId": "root",
+            "styles": {
+                "fontSize": "23",
+                "color": "#ff0000"
+            },
+            "value": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+        },
+        {
+            "element": "button",
+            "id": "lb-2",
+            "index": 1,
+            "parentId": "root",
+            "src": "https://example.com/",
+            "styles": {
+                "backgroundColor": "#ff0000",
+                "color": "#00ff00"
+            },
+            "value": "Button",
+            "version": 4
+        },
+        {
+            "element": "link",
+            "id": "lb-3",
+            "index": 2,
+            "parentId": "root",
+            "src": "https://example.com/",
+            "styles": {
+                "textDecoration": "underline"
+            },
+            "value": "Link"
+        },
+        {
+            "element": "link",
+            "id": "lb-4",
+            "index": 3,
+            "parentId": "root",
+            "src": "https://example.com/",
+            "styles": {
+                "textDecoration": "none"
+            },
+            "value": "Link 2"
+        },
+        {
+            "element": "image",
+            "id": "lb-4",
+            "index": 0,
+            "parentId": "lb-5",
+            "styles": {
+                "position": "right",
+                "width": "77"
+            },
+            "value": "https://cdn-user30887.skyeng.ru/uploads/67695996d92d0258406240.webp"
+        },
+        {
+            "element": "container",
+            "id": "lb-5",
+            "index": 4,
+            "parentId": "root"
+        },
+        {
+            "element": "button",
+            "id": "lb-6",
+            "index": 1,
+            "parentId": "lb-5",
+            "src": "https://example.com/",
+            "styles": {
+                "backgroundColor": "#ff0000",
+                "color": "#00ff00"
+            },
+            "value": "Button",
+            "version": 4
+        },
+        {
+            "element": "link",
+            "id": "lb-7",
+            "index": 2,
+            "parentId": "root",
+            "src": "https://example.com/",
+            "styles": {
+                "textDecoration": "none"
+            },
+            "value": "Link"
+        },
+        {
+            "element": "image",
+            "id": "lb-8",
+            "index": 3,
+            "parentId": "lb-5",
+            "styles": {
+                "position": "center",
+                "width": "77"
+            },
+            "value": "https://cdn-user30887.skyeng.ru/uploads/67695996d92d0258406240.webp"
+        }
+    ]
 }

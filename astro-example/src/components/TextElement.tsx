@@ -1,5 +1,6 @@
 import { CSSProperties } from "react";
 import { type TextElement } from "../configSchema"
+import { ElementComponent } from "./ElementComponent";
 
 export const TextElementComponent = ({ element }: { element: TextElement }) => {
     const style: CSSProperties = {};
@@ -9,5 +10,9 @@ export const TextElementComponent = ({ element }: { element: TextElement }) => {
 			style.fontSize = `${element.styles.fontSize}px`;
 	}
 
-    return <p style={style}>{element.value}</p>
+    return (
+		<ElementComponent>
+			<p style={style}>{element.value}</p>
+		</ElementComponent>
+	);
 }
