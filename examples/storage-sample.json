@@ -98,6 +98,68 @@
                 "width": "77"
             },
             "value": "https://cdn-user30887.skyeng.ru/uploads/67695996d92d0258406240.webp"
+        },
+        {
+            "element": "text",
+            "id": "lb-9",
+            "index": 5,
+            "parentId": "root",
+            "styles": {
+                "format": "h1"
+            },
+            "value": "Header 1"
+        },
+        {
+            "element": "text",
+            "id": "lb-10",
+            "index": 6,
+            "parentId": "root",
+            "styles": {
+                "bold": true,
+                "italic": true,
+                "underline": true
+            },
+            "value": "Paragraph with styles"
+        },
+        {
+            "element": "text",
+            "id": "lb-11",
+            "index": 7,
+            "parentId": "root",
+            "styles": {
+                "textAlign": "center"
+            },
+            "value": "Center text"
+        },
+        {
+            "element": "text",
+            "id": "lb-12",
+            "index": 8,
+            "parentId": "root",
+            "styles": {
+                "textAlign": "right"
+            },
+            "value": "Right text"
+        },
+        {
+            "element": "text",
+            "id": "lb-13",
+            "index": 9,
+            "parentId": "root",
+            "styles": {
+                "format": "h2"
+            },
+            "value": "Header 2"
+        },
+        {
+            "element": "text",
+            "id": "lb-14",
+            "index": 10,
+            "parentId": "root",
+            "styles": {
+                "format": "h3"
+            },
+            "value": "Header 3"
         }
     ]
 }

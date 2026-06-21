@@ -9,6 +9,11 @@ const baseElementSchema = z.object({
 const textELementStylesSchema = z.object({
     color: z.string().optional(),
     fontSize: z.string().optional(),
+	bold: z.boolean().optional(),
+	italic: z.boolean().optional(),
+	underline: z.boolean().optional(),
+	textAlign: z.union([z.literal("left"), z.literal("center"), z.literal("right")]).optional(),
+	format: z.union([z.literal("h1"), z.literal("h2"), z.literal("h3"), z.literal("paragraph")]).optional(),
 }).strip();
 
 const textElementSchema = baseElementSchema.extend({
