@@ -115,9 +115,9 @@
             "index": 6,
             "parentId": "root",
             "styles": {
-                "bold": true,
-                "italic": true,
-                "underline": true
+                "bold": "true",
+                "italic": "true",
+                "underline": "true"
             },
             "value": "Paragraph with styles"
         },

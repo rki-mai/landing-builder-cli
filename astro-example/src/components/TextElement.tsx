@@ -17,11 +17,11 @@ export const TextElementComponent = ({ element }: { element: TextElement }) => {
 			style.fontSize = `${element.styles.fontSize}px`;
 		if (element.styles.textAlign)
 			style.textAlign = element.styles.textAlign;
-		if (element.styles.bold)
+		if (element.styles.bold === "true")
 			style.fontWeight = "bold";
-		if (element.styles.italic)
+		if (element.styles.italic === "true")
 			style.fontStyle = "italic";
-		if (element.styles.underline)
+		if (element.styles.underline === "true")
 			style.textDecoration = "underline";
 	}
 
